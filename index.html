@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Visa & Work Authorization Reference — HonorVet Technologies</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#EE1A0F; --accent2:#FF9000; --gold:#FDD826;
+  --charcoal:#231F20; --grey:#6B7280; --light:#F8F9FB;
+  --border:#E5E7EB; --green:#27AE60; --navy:#0D2B45; --navy2:#123A63; --blue:#1B5E8A;
+  --shadow:0 4px 24px rgba(13,43,69,0.08); --shadow-lg:0 20px 60px rgba(13,43,69,0.16);
+  --mono:'JetBrains Mono',monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:#fff;color:var(--charcoal);overflow-x:hidden;font-size:16px;-webkit-font-smoothing:antialiased;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+
+/* ══════════════ NAV ══════════════ */
+#scrollBar{position:fixed;top:64px;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent),var(--gold));z-index:999;transition:width .08s;}
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-divider{width:1px;height:26px;background:var(--border);}
+.nav-title{font-size:0.62rem;font-weight:700;letter-spacing:2.2px;color:var(--grey);text-transform:uppercase;}
+.nav-year{font-family:var(--mono);font-size:0.68rem;font-weight:700;color:var(--navy);background:#F0F4F8;border:1px solid var(--border);padding:4px 11px;border-radius:20px;letter-spacing:.5px;}
+
+/* ══════════════ HERO — Document/clearance theme ══════════════ */
+#hero{
+  min-height:78vh;position:relative;overflow:hidden;
+  background:var(--navy);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:130px 2.5rem 90px;
+}
+#hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.035) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,#000 40%,transparent 100%);
+}
+#hero::after{
+  content:'';position:absolute;top:-20%;right:-10%;width:60%;height:140%;
+  background:radial-gradient(circle,rgba(238,26,15,0.16) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;max-width:920px;margin:0 auto;text-align:center;}
+.hero-stamp{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1.5px solid rgba(253,216,38,0.55);color:var(--gold);
+  font-family:var(--mono);font-size:0.68rem;font-weight:700;letter-spacing:2.5px;
+  padding:8px 20px;border-radius:3px;margin-bottom:32px;text-transform:uppercase;
+  transform:rotate(-1.2deg);
+}
+h1.hero-h1{
+  font-family:'Playfair Display',serif;font-weight:800;font-style:italic;
+  font-size:clamp(2.4rem,5.2vw,4.4rem);line-height:1.06;color:#fff;margin-bottom:22px;
+  letter-spacing:-0.5px;
+}
+h1.hero-h1 em{
+  font-style:normal;color:var(--gold);
+  background:linear-gradient(180deg,transparent 62%,rgba(253,216,38,0.22) 62%);
+}
+.hero-sub{font-size:1.02rem;color:#B7C4D6;max-width:680px;margin:0 auto 44px;line-height:1.85;}
+.hero-divider{width:56px;height:2px;background:var(--accent);margin:0 auto 44px;}
+.hero-meta-row{display:flex;justify-content:center;gap:0;flex-wrap:wrap;border:1px solid rgba(255,255,255,0.14);border-radius:14px;overflow:hidden;max-width:640px;margin:0 auto;background:rgba(255,255,255,0.03);}
+.hero-meta{flex:1;min-width:150px;padding:22px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
+.hero-meta:last-child{border-right:none;}
+.hero-meta .num{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1;}
+.hero-meta .lbl{font-size:0.66rem;font-weight:600;letter-spacing:1.3px;color:#8FA3BC;text-transform:uppercase;margin-top:6px;}
+
+/* ══════════════ SECTION NAV — clearance checkpoints ══════════════ */
+.cat-nav{position:sticky;top:64px;z-index:500;background:#fff;border-bottom:1px solid var(--border);padding:0 2.5rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none;margin-top:64px;}
+.cat-nav::-webkit-scrollbar{display:none;}
+.cat-nav-inner{display:inline-flex;gap:2px;padding:0;}
+.cat-btn{display:inline-flex;align-items:center;gap:7px;padding:16px 18px;border:none;background:transparent;cursor:pointer;font-family:'Poppins',sans-serif;font-size:0.8rem;font-weight:600;color:var(--grey);transition:all .2s;white-space:nowrap;border-bottom:2px solid transparent;}
+.cat-btn:hover{color:var(--navy);}
+.cat-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
+
+/* ══════════════ MAIN / SECTIONS ══════════════ */
+main{width:100%;max-width:900px;margin:0 auto;padding:0 2.5rem 100px;}
+.sect{padding:80px 0 10px;}
+.sect-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.sect-eyebrow .stampmark{
+  font-family:var(--mono);font-size:0.66rem;font-weight:700;letter-spacing:2px;
+  color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;
+  padding:5px 12px;text-transform:uppercase;transform:rotate(-1deg);
+}
+.sect-title{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:700;color:var(--charcoal);letter-spacing:-0.3px;}
+.sect-intro{font-size:1.02rem;color:#4B5259;line-height:1.9;max-width:760px;margin-bottom:8px;}
+.sect p{font-size:0.98rem;line-height:1.9;color:#3A3F45;margin-bottom:18px;}
+.sect p strong{color:var(--charcoal);font-weight:700;}
+.sect h3{font-family:'Playfair Display',serif;font-size:1.32rem;font-weight:700;margin:34px 0 14px;color:var(--charcoal);}
+
+/* Analogy — redesigned as a marginal note */
+.analogy{
+  position:relative;padding:20px 24px 20px 28px;margin:22px 0 26px;
+  background:#FFFBF2;border-radius:0 12px 12px 0;
+}
+.analogy::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold);border-radius:2px;}
+.analogy .tx{font-size:0.97rem;line-height:1.8;color:#5C4A1E;font-style:italic;}
+.analogy .tx strong{color:#8A6D1E;font-style:normal;font-weight:700;}
+.analogy .lbl{font-family:var(--mono);font-size:0.62rem;font-weight:700;letter-spacing:1.8px;color:#B08D2E;text-transform:uppercase;margin-bottom:8px;display:block;}
+
+/* Fact box — document card styling */
+.factbox{
+  position:relative;background:#fff;border:1px solid var(--border);border-radius:14px;
+  padding:22px 26px;margin:0 0 26px;box-shadow:var(--shadow);
+}
+.factbox::before{
+  content:'';position:absolute;top:14px;right:14px;width:34px;height:34px;
+  border:2px solid #E8ECF0;border-radius:50%;opacity:.5;
+}
+.factbox::after{
+  content:'✓';position:absolute;top:24px;right:24px;font-size:0.9rem;color:#C7CFD6;font-weight:700;
+}
+.factbox .fb-title{font-family:var(--mono);font-size:0.66rem;font-weight:700;letter-spacing:1.8px;color:var(--navy);margin-bottom:12px;text-transform:uppercase;}
+.factbox p{margin-bottom:0;font-size:0.96rem;}
+.factbox p+p{margin-top:10px;}
+
+/* Definition list — ID-card row styling */
+.deflist{display:flex;flex-direction:column;margin:0 0 26px;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+.defrow{display:flex;gap:20px;padding:16px 22px;border-bottom:1px solid var(--border);align-items:flex-start;background:#fff;}
+.defrow:last-child{border-bottom:none;}
+.defrow .term{min-width:130px;font-family:var(--mono);font-weight:700;color:var(--navy);font-size:0.85rem;flex-shrink:0;padding-top:1px;}
+.defrow .meaning{font-size:0.93rem;color:#3A3F45;line-height:1.75;}
+.defrow .meaning strong{color:var(--charcoal);}
+
+/* Visa reference rows */
+.visa-list{display:flex;flex-direction:column;gap:0;margin:22px 0 28px;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+.visa-row{display:flex;gap:22px;align-items:flex-start;background:#fff;padding:18px 22px;border-bottom:1px solid var(--border);}
+.visa-row:last-child{border-bottom:none;}
+.visa-row .vtag{min-width:88px;flex-shrink:0;font-family:var(--mono);font-weight:700;font-size:0.98rem;color:var(--accent);padding-top:1px;}
+.visa-row .vtxt{font-size:0.93rem;color:#3A3F45;line-height:1.75;}
+.visa-row .vtxt strong{color:var(--charcoal);}
+
+/* Callouts — redesigned for guaranteed contrast */
+.callout{border-radius:14px;padding:24px 28px;margin:26px 0;position:relative;overflow:hidden;}
+.callout .kicker{font-family:var(--mono);font-size:0.64rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;display:block;}
+.callout h4{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:8px;font-weight:700;}
+.callout p{font-size:0.93rem;line-height:1.8;margin-bottom:0;}
+.callout p strong,.callout p em{color:inherit;font-weight:700;}
+
+.callout.core{background:var(--navy);color:#fff;}
+.callout.core .kicker{color:var(--gold);}
+.callout.core h4{color:#fff;}
+.callout.core p{color:#C7D4E5;}
+.callout.core p strong{color:var(--gold);}
+
+.callout.watch{background:#FFF6F5;border:1px solid #FBC9C4;}
+.callout.watch .kicker{color:var(--accent);}
+.callout.watch h4{color:var(--accent);}
+.callout.watch p{color:#5C2B27;}
+.callout.watch p strong{color:var(--accent);}
+
+.callout.clear{background:#F3FAF6;border:1px solid #B9E6CC;}
+.callout.clear .kicker{color:#1A8049;}
+.callout.clear h4{color:#0D6B3B;}
+.callout.clear p{color:#264B39;}
+.callout.clear p strong{color:#0D6B3B;}
+
+.callout.update{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;
+  border:1px solid rgba(253,216,38,0.25);
+}
+.callout.update .kicker{color:var(--gold);}
+.callout.update h4{color:#fff;}
+.callout.update p{color:#CFE0EE;}
+.callout.update p strong{color:var(--gold);font-weight:700;}
+.callout.update::after{
+  content:'2026';position:absolute;bottom:-18px;right:6px;
+  font-family:var(--mono);font-size:5rem;font-weight:700;color:rgba(255,255,255,0.04);line-height:1;
+}
+
+/* Recruiter tip — practical advice, not instructions */
+.rtip{
+  display:flex;gap:14px;align-items:flex-start;background:#F7F9FC;border:1px solid var(--border);
+  border-radius:12px;padding:16px 22px;margin:22px 0;
+}
+.rtip .ic{font-size:1.05rem;flex-shrink:0;line-height:1.5;}
+.rtip .body{font-size:0.9rem;color:#3A3F45;line-height:1.75;}
+.rtip .body b{font-family:var(--mono);font-size:0.66rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);display:block;margin-bottom:5px;}
+
+/* Comparison table */
+.cmp-table{width:100%;border-collapse:collapse;margin:22px 0 28px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);font-size:0.9rem;}
+.cmp-table thead th{background:var(--navy);color:#fff;padding:14px 20px;text-align:left;font-weight:600;font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-family:var(--mono);}
+.cmp-table tbody td{padding:13px 20px;border-bottom:1px solid var(--border);background:#fff;vertical-align:top;}
+.cmp-table tbody tr:nth-child(even) td{background:#FAFBFC;}
+.cmp-table tbody tr:last-child td{border-bottom:none;}
+.cmp-table td.hl{font-weight:700;color:var(--accent);}
+.cmp-table td:first-child{font-weight:600;color:var(--navy);}
+
+/* Checklist */
+.checklist{display:flex;flex-direction:column;gap:2px;margin:22px 0 28px;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+.chk-item{display:flex;gap:18px;background:#fff;padding:17px 22px;border-bottom:1px solid var(--border);}
+.chk-item:last-child{border-bottom:none;}
+.chk-item .num{font-family:var(--mono);min-width:26px;height:26px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.chk-item .body b{display:block;color:var(--navy);font-size:0.93rem;margin-bottom:3px;}
+.chk-item .body span{font-size:0.87rem;color:var(--grey);line-height:1.65;}
+
+/* Red flags */
+.redflags{display:flex;flex-direction:column;gap:0;margin:22px 0 28px;border-radius:14px;overflow:hidden;border:1px solid #FBC9C4;}
+.rf-item{display:flex;gap:14px;font-size:0.92rem;color:#3A3F45;line-height:1.7;padding:15px 22px;background:#fff;border-bottom:1px solid #FBE4E1;}
+.rf-item:last-child{border-bottom:none;}
+.rf-item .flag{color:var(--accent);flex-shrink:0;font-family:var(--mono);font-weight:700;}
+
+.divider-stamp{display:flex;align-items:center;gap:16px;margin:70px 0 0;}
+.divider-stamp .line{flex:1;height:1px;background:var(--border);}
+.divider-stamp .mark{font-family:var(--mono);font-size:0.62rem;font-weight:700;letter-spacing:2px;color:#C7CFD6;text-transform:uppercase;}
+
+/* ══════════════ FAMILY TREE DIAGRAM ══════════════ */
+.tree-wrap{margin:26px 0 30px;border:1px solid var(--border);border-radius:16px;padding:32px 28px 26px;background:#FAFBFC;overflow-x:auto;}
+.tree-wrap .tree-caption{font-family:var(--mono);font-size:0.64rem;font-weight:700;letter-spacing:1.6px;color:var(--grey);text-transform:uppercase;margin-bottom:20px;text-align:center;}
+.tree-row{display:flex;align-items:center;gap:0;margin-bottom:14px;min-width:640px;}
+.tree-row:last-child{margin-bottom:0;}
+.tree-node{border-radius:10px;padding:12px 18px;font-weight:700;font-size:0.92rem;text-align:center;flex-shrink:0;position:relative;}
+.tree-node.principal{background:var(--navy);color:#fff;min-width:118px;}
+.tree-node.dependent{background:#fff;border:2px solid var(--navy);color:var(--navy);min-width:100px;}
+.tree-node.ead{border-radius:20px;font-family:var(--mono);font-size:0.78rem;min-width:110px;text-align:center;}
+.tree-node.ead.auto{background:#0D6B3B;color:#fff;}
+.tree-node.ead.required{background:var(--accent);color:#fff;}
+.tree-node.ead.none{background:#F3F4F6;color:#9CA3AF;border:1px dashed #C7CFD6;font-style:italic;font-weight:500;}
+.tree-arrow{flex-shrink:0;width:44px;display:flex;align-items:center;justify-content:center;color:#C7CFD6;font-size:1.1rem;}
+.tree-sub{font-size:0.66rem;color:var(--grey);margin-top:3px;font-weight:500;text-transform:none;letter-spacing:0;}
+.tree-legend{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);}
+.tree-legend .litem{display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--grey);}
+.tree-legend .dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
+.tree-legend .dot.auto{background:#0D6B3B;}
+.tree-legend .dot.required{background:var(--accent);}
+.tree-legend .dot.none{background:#C7CFD6;}
+
+/* ══════════════ FORMS TABLE ══════════════ */
+.forms-table{width:100%;border-collapse:collapse;margin:22px 0 28px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);font-size:0.88rem;}
+.forms-table thead th{background:var(--navy);color:#fff;padding:14px 18px;text-align:left;font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;font-family:var(--mono);}
+.forms-table tbody td{padding:13px 18px;border-bottom:1px solid var(--border);background:#fff;vertical-align:top;}
+.forms-table tbody tr:nth-child(even) td{background:#FAFBFC;}
+.forms-table tbody tr:last-child td{border-bottom:none;}
+.forms-table td.formnum{font-family:var(--mono);font-weight:700;color:var(--accent);white-space:nowrap;}
+.forms-table td.who{font-weight:600;color:var(--navy);white-space:nowrap;}
+.form-chip{display:inline-block;font-family:var(--mono);font-size:0.78rem;font-weight:700;color:var(--accent);background:#FFF1F0;border:1px solid #FBC9C4;padding:2px 9px;border-radius:5px;margin:0 2px;white-space:nowrap;}
+
+/* ══════════════ PROGRESS PANEL ══════════════ */
+#progressPanel{position:fixed;bottom:24px;right:24px;z-index:800;font-family:'Poppins',sans-serif;}
+#progressToggle{display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border:none;border-radius:12px;padding:11px 18px;cursor:pointer;font-family:var(--mono);font-size:0.7rem;font-weight:700;box-shadow:0 8px 26px rgba(13,43,69,0.35);transition:all .2s;letter-spacing:.5px;}
+#progressToggle:hover{background:var(--accent);transform:translateY(-2px);}
+#progressBody{display:none;background:#fff;border-radius:14px;padding:18px 20px;box-shadow:var(--shadow-lg);margin-bottom:10px;min-width:240px;border:1px solid var(--border);}
+#progressBody.open{display:block;}
+.pb-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--charcoal);margin-bottom:2px;}
+.pb-sub{font-size:0.66rem;color:var(--grey);margin-bottom:14px;}
+.score-display{display:flex;align-items:baseline;gap:5px;margin-bottom:8px;}
+.score-num{font-family:var(--mono);font-size:1.9rem;font-weight:700;color:var(--accent);line-height:1;}
+.score-max{font-size:0.7rem;color:var(--grey);}
+.score-bar-wrap{background:#F3F4F6;border-radius:8px;height:7px;overflow:hidden;}
+.score-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:8px;transition:width .5s ease;width:0%;}
+
+/* ══════════════ QUIZ ══════════════ */
+.quiz-section{background:var(--navy);border-radius:22px;padding:48px;margin:60px 0 30px;color:#fff;position:relative;overflow:hidden;}
+.quiz-section::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;}
+.quiz-section>*{position:relative;z-index:1;}
+.quiz-eyebrow{font-family:var(--mono);font-size:0.68rem;font-weight:700;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
+.quiz-section h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin-bottom:8px;font-weight:700;}
+.quiz-section>p{font-size:0.87rem;opacity:.75;margin-bottom:32px;line-height:1.7;max-width:560px;}
+#quizWrap{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:30px;}
+.q-num{font-family:var(--mono);font-size:0.68rem;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:10px;}
+.q-text{font-size:0.98rem;font-weight:600;margin-bottom:22px;line-height:1.65;}
+.q-opts{display:flex;flex-direction:column;gap:9px;}
+.q-opt{border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:13px 18px;cursor:pointer;font-size:0.86rem;font-family:'Poppins',sans-serif;background:rgba(255,255,255,.04);text-align:left;color:#fff;transition:all .2s;}
+.q-opt:hover:not(:disabled){border-color:var(--gold);background:rgba(253,216,38,.07);}
+.q-opt.correct{border-color:#4ADE80;background:rgba(74,222,128,.12);color:#4ADE80;}
+.q-opt.wrong{border-color:#F87171;background:rgba(248,113,113,.1);color:#F87171;}
+.q-feedback{display:none;margin-top:16px;padding:14px 18px;border-radius:10px;font-size:0.85rem;line-height:1.65;}
+.q-feedback.show.good{display:block;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.28);color:#4ADE80;}
+.q-feedback.show.bad{display:block;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.22);color:#F87171;}
+.q-nav{display:flex;align-items:center;justify-content:space-between;margin-top:24px;flex-wrap:wrap;gap:10px;}
+.q-progress-txt{font-family:var(--mono);font-size:0.7rem;color:rgba(255,255,255,.45);}
+.q-next-btn{background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:11px 24px;font-family:'Poppins',sans-serif;font-weight:700;font-size:0.8rem;cursor:pointer;display:none;transition:all .2s;}
+.q-next-btn:hover{background:#fff;} .q-next-btn.show{display:inline-flex;align-items:center;gap:5px;}
+.quiz-result{display:none;text-align:center;padding:20px;}
+.quiz-result.show{display:block;}
+.qr-score{font-family:var(--mono);font-size:3rem;font-weight:700;color:var(--gold);margin:12px 0;}
+.qr-msg{font-size:0.9rem;opacity:.8;margin-bottom:22px;}
+.qr-restart{background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:12px 28px;font-family:'Poppins',sans-serif;font-weight:700;font-size:0.84rem;cursor:pointer;transition:all .2s;}
+.qr-restart:hover{background:#fff;}
+
+/* ══════════════ CERTIFICATE ══════════════ */
+.cert-section-header{text-align:center;margin-bottom:32px;}
+.cert-section-header .kicker{font-family:var(--mono);font-size:0.66rem;font-weight:700;letter-spacing:2.5px;color:var(--accent);text-transform:uppercase;margin-bottom:12px;display:block;}
+.cert-section-header h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin-bottom:10px;font-weight:700;}
+.cert-section-header p{color:var(--grey);font-size:0.9rem;max-width:520px;margin:0 auto;}
+.cert-input-wrap{display:flex;gap:12px;justify-content:center;align-items:center;margin-bottom:36px;flex-wrap:wrap;}
+.cert-input-wrap input{padding:13px 22px;border-radius:10px;border:1.5px solid var(--border);font-family:'Poppins',sans-serif;font-size:0.95rem;outline:none;transition:border-color .2s;width:300px;max-width:100%;}
+.cert-input-wrap input:focus{border-color:var(--accent);}
+.cert-generate-btn{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px 30px;font-family:'Poppins',sans-serif;font-weight:700;font-size:0.9rem;cursor:pointer;transition:background .2s,transform .2s;}
+.cert-generate-btn:hover{background:#C41510;transform:translateY(-2px);}
+#certDisplay{display:none;}
+
+.cert-box{background:#ffffff;border:4px solid var(--accent);border-radius:10px;padding:0;max-width:760px;margin:0 auto;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12);font-family:'Poppins',sans-serif;text-align:center;}
+.cert-box::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--accent),var(--gold),var(--accent));}
+.cert-inner-pad{padding:44px 56px 40px;}
+.cert-logo-area{display:flex;flex-direction:column;align-items:center;margin-bottom:12px;}
+.cert-logo-area img{height:64px;object-fit:contain;}
+.cert-sdvosb{font-size:0.58rem;letter-spacing:3.5px;color:#999;font-weight:600;margin-top:8px;text-transform:uppercase;}
+.cert-top-divider{width:100%;height:1px;background:#ddd;margin:16px 0 22px;}
+.cert-label-top{font-size:0.7rem;letter-spacing:4px;color:var(--accent);font-weight:700;margin-bottom:10px;text-transform:uppercase;}
+.cert-course-title{font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:800;color:var(--charcoal);margin-bottom:4px;line-height:1.2;}
+.cert-course-sub-ref{font-size:0.88rem;color:#555;margin-bottom:22px;font-style:italic;}
+.cert-presents-ref{font-size:0.8rem;color:#777;margin-bottom:8px;}
+.cert-name-gradient{font-family:'Poppins',sans-serif;font-size:2.4rem;font-weight:800;color:var(--accent);line-height:1.1;margin-bottom:0;display:inline-block;border-bottom:2px solid var(--accent);padding-bottom:8px;min-width:300px;}
+.cert-desc-text{font-size:0.83rem;color:#444;line-height:1.85;max-width:580px;margin:18px auto 0;}
+.cert-stat-row{display:flex;align-items:center;justify-content:center;gap:0;margin:22px auto;border:1.5px solid #e0c8c8;border-radius:30px;width:fit-content;overflow:hidden;}
+.cert-stat-pill{padding:10px 24px;font-size:0.82rem;font-weight:600;color:var(--charcoal);background:#fff;}
+.cert-sig-divider{width:100%;height:1px;background:#ddd;margin:20px 0 22px;}
+.cert-sig-ref{display:flex;flex-direction:column;align-items:center;}
+.cert-sig-name-ref{font-family:'Poppins',sans-serif;font-style:italic;font-size:1.6rem;font-weight:700;color:var(--charcoal);border-bottom:2px solid var(--charcoal);padding-bottom:6px;min-width:260px;text-align:center;margin-bottom:8px;}
+.cert-sig-role-ref{font-size:0.65rem;color:var(--accent);font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:3px;}
+.cert-sig-org-ref{font-size:0.68rem;color:#888;}
+.cert-bottom-row{display:flex;justify-content:center;gap:60px;margin-top:24px;padding-top:18px;border-top:1px solid #eee;}
+.cert-bottom-col{display:flex;flex-direction:column;align-items:center;gap:3px;}
+.cert-bottom-val{font-family:var(--mono);font-size:0.85rem;font-weight:700;color:var(--charcoal);}
+.cert-bottom-lbl{font-size:0.58rem;letter-spacing:2.5px;color:#999;text-transform:uppercase;font-weight:600;}
+.cert-print-btn{display:inline-flex;align-items:center;gap:8px;margin-top:28px;background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:12px 32px;font-family:'Poppins',sans-serif;font-weight:700;font-size:0.88rem;cursor:pointer;transition:opacity .2s,transform .2s;}
+.cert-print-btn:hover{opacity:0.88;transform:translateY(-2px);}
+
+/* ══════════════ FOOTER ══════════════ */
+.footer-flag{display:flex;height:4px;width:100%;}
+.footer-flag .f1{flex:1;background:var(--accent);}
+.footer-flag .f2{flex:1;background:var(--navy);}
+footer{background:#0A1D30;padding:0;}
+.footer-inner{padding:40px 2.5rem;text-align:center;}
+.footer-branding{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:16px;}
+.footer-brand-name{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:800;letter-spacing:1px;color:#fff;}
+.footer-sep{color:#3A5068;font-size:1.2rem;font-weight:300;margin:0 4px;}
+.footer-sdvosb{font-family:var(--mono);font-size:0.66rem;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;}
+.footer-sub{font-size:0.86rem;color:#8FA3BC;margin-bottom:8px;line-height:1.7;}
+.footer-copy{font-size:0.76rem;color:#5C7089;margin-top:6px;}
+
+@media(max-width:768px){
+  nav,main,.cat-nav{padding-left:1.2rem;padding-right:1.2rem;}
+  .hero-meta-row{flex-direction:column;}
+  .hero-meta{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .hero-meta:last-child{border-bottom:none;}
+  .cert-inner-pad{padding:30px 24px;}
+  .defrow,.visa-row{flex-direction:column;gap:6px;}
+  .cmp-table{font-size:0.78rem;}
+  .quiz-section{padding:28px 22px;}
+}
+
+.cert-only-print{ display:none; }
+@media print{
+  html,body{ margin:0!important; padding:0!important; background:#fff!important; }
+  .cert-only-print{ display:block!important; }
+  body > *{ display:none!important; }
+  body > .cert-only-print{ display:block!important; }
+  .cert-box{ box-shadow:none!important; max-width:100%!important; border:4px solid #EE1A0F!important; }
+  .cert-print-btn{ display:none!important; }
+  @page{ margin:0.5cm; size:A4 portrait; }
+}
+</style>
+</head>
+<body>
+
+<div id="scrollBar"></div>
+<nav>
+  <a class="nav-brand" href="#">
+    <img src="data:image/png;base64,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1qS/Egn8STgEQQxx+7fMaw72/u7w/wCkTvIP7pPH5dK7C38CyuQbq7RB3WNd36nFbVl4T0izIY2/nuP4pju/Tp+lethskrvVxUfUX9oYHD6wV35f5s8ystE1HVX22dq7rnBfGFH4niuy0f4d20BWbVJftDjnyUyEH1PU/pXbKqooVVCqOAAMAUte/h8rpUtZe8/w+44MTnmIqrlp+6vLf7/8hkMMVvEsUMaxxqMKiDAH4U+iivTPGbbd2FFFFAgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z" alt="HonorVet Technologies" style="height:38px;object-fit:contain;">
+    <div class="nav-divider"></div>
+    <span class="nav-title">Visa &amp; Work Authorization Reference</span>
+  </a>
+  <span class="nav-year">2026 EDITION</span>
+</nav>
+
+<div class="cat-nav">
+  <div class="cat-nav-inner">
+    <button class="cat-btn active" onclick="jumpTo('#sect-foundations',this)">Foundations</button>
+    <button class="cat-btn" onclick="jumpTo('#sect-employment',this)">Work Visas</button>
+    <button class="cat-btn" onclick="jumpTo('#sect-dependent',this)">Family &amp; Dependents</button>
+    <button class="cat-btn" onclick="jumpTo('#sect-greencard',this)">Green Card Track</button>
+    <button class="cat-btn" onclick="jumpTo('#sect-student',this)">Student Status</button>
+    <button class="cat-btn" onclick="jumpTo('#sect-codes',this)">Reference Codes</button>
+    <button class="cat-btn" onclick="jumpTo('#sect-forms',this)">Forms at a Glance</button>
+    <button class="cat-btn" onclick="jumpTo('#sect-validation',this)">Screening Playbook</button>
+    <button class="cat-btn" onclick="jumpTo('#quizSection',this)">Knowledge Check</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══════════════════ FOUNDATIONS ═══════════════════ -->
+<div class="sect" id="sect-foundations">
+  <div class="sect-eyebrow"><span class="stampmark">START HERE</span></div>
+  <div class="sect-title">The Foundations</div>
+  <p class="sect-intro">Before H-1B, L-1, and every other acronym — six words decide whether a recruiter reads a candidate's status correctly. Get comfortable with these first.</p>
+
+  <h3>Passport — The National ID Book</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">A passport is a person's <strong>national ID book</strong> — it belongs to their home country and proves who they are, wherever they travel.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>A passport is an official travel document issued by a person's home government. It proves identity and nationality. An Indian citizen carries an Indian passport regardless of which country they visit or work in. A passport by itself does <strong>not</strong> grant the right to enter or work in the United States — that's what a visa is for.</p>
+  </div>
+
+  <h3>Visa — The Ticket and Permission Slip</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">If the passport is the ID book, a visa is the <strong>ticket and permission slip</strong> stuck inside it — issued by the country you want to visit, saying "yes, you may come to our border and request entry."</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>A visa is an entry-clearance stamp or sticker placed in a passport by a US Embassy or Consulate. It grants permission to <strong>travel to</strong> and <strong>seek entry into</strong> the United States — it is not, by itself, a guarantee of admission, and it is not automatically a work permit.</p>
+  </div>
+
+  <div class="callout watch">
+    <span class="kicker">Common Error</span>
+    <h4>"Has a visa" ≠ "Can work"</h4>
+    <p>A visa only gets someone to the US border. Whether they can actually work once inside depends on their <strong>status</strong> and, often, a separate document called an <strong>EAD</strong>. That distinction is the backbone of this entire reference.</p>
+  </div>
+
+  <h3>Passport vs. Visa, Side by Side</h3>
+  <table class="cmp-table">
+    <thead><tr><th>Passport</th><th>Visa</th></tr></thead>
+    <tbody>
+      <tr><td>Issued by the person's home country</td><td>Issued by the country being visited</td></tr>
+      <tr><td>Proves identity and nationality</td><td>Grants permission to travel to and request entry</td></tr>
+      <tr><td>Doesn't expire based on travel plans</td><td>Has its own validity period and category (H-1B, F-1, B-2...)</td></tr>
+      <tr><td>One passport, valid everywhere</td><td>Different visas needed for different countries</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Status — What They're Allowed to Do Once Inside</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">If the visa is the ticket that got someone through the door, <strong>status</strong> is what they're allowed to do <em>after</em> they're inside — and it can change even if the visa stamp itself doesn't.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>Status is the legal category a person holds while physically in the United States. Someone can enter on an H-1B visa, and later their status changes — say, to H-4, or to a pending Green Card applicant — without a new visa stamp, because they haven't left and re-entered. This is why recruiters ask about <strong>current status</strong>, never just "what visa did you enter on."</p>
+  </div>
+
+  <h3>Form I-94 — The Official Arrival Record</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">The I-94 is the <strong>receipt</strong> US Customs hands over at the border — the official record of when someone arrived, in what status, and how long they may stay.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>Form I-94 is the Arrival/Departure Record. It's often the <strong>real source of truth</strong> about current status — more current than the visa stamp, since status can change after entry. Candidates can check their own I-94 at the official CBP website using their passport details.</p>
+  </div>
+
+  <h3>EAD — The Separate Work Permit Card</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">An EAD is a <strong>separate work permit card</strong> — a physical, wallet-sized ID that specifically says "this person may legally work in the US," issued independently of the visa itself.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p><strong>EAD</strong> stands for <strong>Employment Authorization Document</strong> — officially Form I-766, issued by USCIS. It is the actual proof a person can legally work, separate from whatever visa or status they hold. Not everyone needs one (an H-1B worker's visa itself authorizes work with their sponsor), but many categories — H-4 spouses, some L-2 spouses, OPT students, Green Card applicants — specifically need this card.</p>
+  </div>
+
+  <div class="callout watch">
+    <span class="kicker">Say This Correctly</span>
+    <h4>An EAD Is Not a Visa Type — It's a Document</h4>
+    <p>"H-1B," "L-1," "F-1" are <strong>visa categories</strong>. "EAD" is not in that list — it's a <strong>physical card</strong> (Form I-766) that USCIS issues to prove work authorization, and it can sit on top of several different underlying statuses. There is no such thing as "an EAD visa." A candidate is never simply "on an EAD" — they hold a specific status (H-4, L-2, F-1/OPT, pending Green Card, etc.) <em>and</em>, depending on that status, may also hold an EAD card proving they can work. Always ask for the status first, then ask whether an EAD applies to it.</p>
+  </div>
+
+  <div class="callout core">
+    <span class="kicker">The Core Idea</span>
+    <h4>Entry ≠ Employment</h4>
+    <p>A visa gets someone into the country. Work authorization — through the visa itself, or through a separate EAD — is what allows them to legally work. These are <strong>not always the same thing</strong>, and confusing them is the single most common recruiter error. Every section below builds on this one distinction.</p>
+  </div>
+
+  <h3>Social Security Number — The Payroll ID</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">An SSN is a person's <strong>permanent employee ID number</strong> for the entire US system — used for payroll, taxes, and work history, issued once and never changed.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>A nine-digit number issued by the Social Security Administration to citizens, permanent residents, and temporary workers authorized to work. Required for payroll and tax reporting — a candidate cannot be legally paid on US payroll without one. Confirm early whether a candidate already has an SSN or needs to apply after their status is approved.</p>
+  </div>
+
+  <h3>Form I-9 — The Final Checkpoint</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">The I-9 is the <strong>final checkpoint</strong> every US employer runs — confirming "we checked this person's documents and they are legally allowed to work here."</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>Every US employer must complete Form I-9 for every hire. The employee shows either <strong>one List A document</strong> (like an unexpired EAD or a US passport — proves identity and work authorization together) <strong>or one List B + one List C document</strong> (like a driver's license plus a Social Security card).</p>
+  </div>
+
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>Ask a candidate what documents they can present for Form I-9 early in the screening call — the answer directly predicts whether onboarding goes smoothly or stalls at the client.</div></div>
+</div>
+
+<div class="divider-stamp"><div class="line"></div><div class="mark">Section 02</div><div class="line"></div></div>
+
+<!-- ═══════════════════ WORK VISAS ═══════════════════ -->
+<div class="sect" id="sect-employment">
+  <div class="sect-eyebrow"><span class="stampmark">SPONSORED WORK</span></div>
+  <div class="sect-title">Work Visas</div>
+  <p class="sect-intro">The visas tied directly to a job — where the visa and the work authorization travel together.</p>
+
+  <div class="visa-list">
+    <div class="visa-row"><div class="vtag">H-1B</div><div class="vtxt">The most common visa recruiters encounter. A <strong>specialty occupation</strong> visa requiring a US employer sponsor and a role needing specialized knowledge (typically a bachelor's degree or higher). Initial approval covers up to 3 years, extendable to <strong>6 years total</strong>, and further extendable under AC21 if a Green Card process is already underway. Employer files <span class="form-chip">Form I-129</span> for petition, extension, or amendment.</div></div>
+    <div class="visa-row"><div class="vtag">H-1B1</div><div class="vtxt">A close cousin of H-1B reserved specifically for citizens of <strong>Chile and Singapore</strong> under Free Trade Agreement provisions. Also filed on <span class="form-chip">Form I-129</span>.</div></div>
+    <div class="visa-row"><div class="vtag">L-1A</div><div class="vtxt"><strong>Intra-company transfer</strong> visa for executives and managers moving from an overseas office to a US branch, subsidiary, or affiliate. Employer files <span class="form-chip">Form I-129</span>.</div></div>
+    <div class="visa-row"><div class="vtag">L-1B</div><div class="vtxt">Same intra-company transfer concept, for employees with <strong>specialized knowledge</strong> rather than management roles. Also filed on <span class="form-chip">Form I-129</span>.</div></div>
+    <div class="visa-row"><div class="vtag">TN</div><div class="vtxt">USMCA (formerly NAFTA) professional worker visa for <strong>Canadian (TN-1)</strong> and <strong>Mexican (TN-2)</strong> citizens in specific listed professions. Renewed indefinitely as long as the job qualifies. Extended in the US via <span class="form-chip">Form I-129</span>; Canadians can also renew at the border with no petition.</div></div>
+    <div class="visa-row"><div class="vtag">E-3</div><div class="vtxt">Reserved for <strong>Australian citizens</strong> in a specialty occupation. Functions like a simplified H-1B with its own, rarely-reached annual cap. US extensions filed on <span class="form-chip">Form I-129</span>.</div></div>
+    <div class="visa-row"><div class="vtag">B-1/B-2</div><div class="vtxt"><strong>Not work visas at all.</strong> B-1 is for business visitors; B-2 is tourism or medical treatment. Flag immediately if a candidate's only status is B-1/B-2.</div></div>
+  </div>
+
+  <div class="callout update">
+    <span class="kicker">2026 Update</span>
+    <h4>The H-1B Lottery Changed</h4>
+    <p>H-1B is subject to an annual lottery cap for new registrations. USCIS introduced a <strong>wage-weighted selection system</strong> effective February 27, 2026, replacing the old random lottery. Sponsorship for a brand-new H-1B is less predictable than in past cycles — always confirm current cap-subject status with the candidate rather than assuming based on past years.</p>
+  </div>
+
+  <div class="callout core">
+    <span class="kicker">Who Files What</span>
+    <h4>I-129 Belongs to the Employer, Not the Candidate</h4>
+    <p><span class="form-chip">Form I-129</span>, Petition for a Nonimmigrant Worker, is filed by the <strong>employer</strong> — never the candidate directly — for H-1B, H-1B1, L-1A, L-1B, TN, and E-3 petitions, extensions, and amendments. If a candidate says "I'm filing my own extension," they likely mean a dependent filing (see the Family &amp; Dependents section), not their own principal work visa.</p>
+  </div>
+
+  <h3>Visa by Nationality Requirement</h3>
+  <div class="deflist">
+    <div class="defrow"><div class="term">H-1B1</div><div class="meaning">Chile, Singapore only</div></div>
+    <div class="defrow"><div class="term">E-3</div><div class="meaning">Australia only</div></div>
+    <div class="defrow"><div class="term">TN</div><div class="meaning">Canada, Mexico only</div></div>
+    <div class="defrow"><div class="term">H-1B / L-1 / F-1</div><div class="meaning">Open to all nationalities</div></div>
+  </div>
+
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>When a requirement lists "H-1B acceptable," don't stop there — confirm the candidate's H-1B extension history. A candidate near their 6-year cap with no pending I-140 is a real placement risk on anything beyond a short contract.</div></div>
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>For E-3, TN, and H-1B1 candidates, confirm nationality on the very first call — these visas simply don't exist for anyone outside their designated country, no matter how strong the resume.</div></div>
+</div>
+
+<div class="divider-stamp"><div class="line"></div><div class="mark">Section 03</div><div class="line"></div></div>
+
+<!-- ═══════════════════ FAMILY & DEPENDENTS ═══════════════════ -->
+<div class="sect" id="sect-dependent">
+  <div class="sect-eyebrow"><span class="stampmark">HIGH RISK OF ERROR</span></div>
+  <div class="sect-title">Family &amp; Dependents</div>
+  <p class="sect-intro">Dependent visas go to the spouse and children (under 21) of a principal visa holder. On their own, most dependent visas do <strong>not</strong> permit employment — whether a dependent can legally work depends entirely on which principal visa they're attached to. This is the single most confused topic in recruiter screening.</p>
+
+  <div class="tree-wrap">
+    <div class="tree-caption">Principal Visa → Dependent Status → Work Authorization</div>
+
+    <div class="tree-row">
+      <div class="tree-node principal">H-1B<div class="tree-sub" style="color:#B7C4D6;">Employee</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node dependent">H-4<div class="tree-sub">spouse/child</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node ead required">H4-EAD required<div class="tree-sub" style="color:#FFE0DD;">only if I-140 approved</div></div>
+    </div>
+
+    <div class="tree-row">
+      <div class="tree-node principal">L-1A / L-1B<div class="tree-sub" style="color:#B7C4D6;">Employee</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node dependent">L-2<div class="tree-sub">spouse/child</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node ead auto">Automatic (spouse)<div class="tree-sub" style="color:#D6F0E0;">I-94 "L-2S" code</div></div>
+    </div>
+
+    <div class="tree-row">
+      <div class="tree-node principal">E-3<div class="tree-sub" style="color:#B7C4D6;">Employee</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node dependent">E-3D<div class="tree-sub">spouse/child</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node ead required">EAD required<div class="tree-sub" style="color:#FFE0DD;">spouse only, like H-4</div></div>
+    </div>
+
+    <div class="tree-row">
+      <div class="tree-node principal">F-1<div class="tree-sub" style="color:#B7C4D6;">Student</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node dependent">F-2<div class="tree-sub">spouse/child</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node ead none">No work authorization</div>
+    </div>
+
+    <div class="tree-row">
+      <div class="tree-node principal">TN<div class="tree-sub" style="color:#B7C4D6;">Worker</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node dependent">TD<div class="tree-sub">spouse/child</div></div>
+      <div class="tree-arrow">→</div>
+      <div class="tree-node ead none">No work authorization</div>
+    </div>
+
+    <div class="tree-legend">
+      <div class="litem"><span class="dot auto"></span>Automatic — no EAD card needed</div>
+      <div class="litem"><span class="dot required"></span>EAD card required, conditional eligibility</div>
+      <div class="litem"><span class="dot none"></span>No work authorization available</div>
+    </div>
+  </div>
+
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">Two families with a similar-looking guest pass — one family's pass lets the spouse work immediately, no extra paperwork; the other family's spouse needs to apply for a separate work badge first. They look similar on the surface, but the rules are completely different.</span></div>
+
+  <h3>H-4 — Dependent of H-1B / H-1B1</h3>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>H-4 is the dependent status for spouses and children of H-1B and H-1B1 holders. <strong>H-4 status alone does not authorize work.</strong> A subset of H-4 spouses may separately qualify for an <strong>H4-EAD</strong> — but this requires its own application and its own physical card.</p>
+  </div>
+  <div class="checklist">
+    <div class="chk-item"><div class="num">1</div><div class="body"><b>Not automatic</b><span>Eligibility requires the H-1B spouse to have an approved I-140, or an H-1B extension beyond the 6-year cap under AC21 (PERM/I-140 pending 365+ days). The H-4 spouse files <span class="form-chip">Form I-539</span> to extend or obtain H-4 status, and <span class="form-chip">Form I-765</span> to apply for the EAD itself — often submitted together.</span></div></div>
+    <div class="chk-item"><div class="num">2</div><div class="body"><b>Physical card required — no exceptions</b><span>The candidate must hold an unexpired EAD (Form I-766), category code C(26), before starting employment.</span></div></div>
+    <div class="chk-item"><div class="num">3</div><div class="body"><b>No more automatic bridge extension</b><span>Renewals filed on or after October 30, 2025 get no 540-day bridge — if the card expires before renewal is approved, the candidate cannot legally work.</span></div></div>
+    <div class="chk-item"><div class="num">4</div><div class="body"><b>Always check the card itself</b><span>Don't take a candidate's word for "I have an EAD" — ask to see it and confirm the dates are current.</span></div></div>
+  </div>
+
+  <h3>L-2 — Dependent of L-1A / L-1B</h3>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>L-2 is the dependent status for spouses and children of L-1A and L-1B holders. This is where L-2 and H-4 diverge sharply — and it's the update most recruiters miss.</p>
+  </div>
+  <div class="callout update">
+    <span class="kicker">Rule Change — Since Jan 30, 2022</span>
+    <h4>L-2 Spouses Get Automatic Work Authorization</h4>
+    <p>L-2 spouses receive <strong>work authorization incident to status</strong> — no separate EAD card required. USCIS and CBP issue an I-94 with the class-of-admission code <strong>"L-2S"</strong> for the spouse. An unexpired I-94 showing L-2S is itself acceptable proof of work authorization.</p>
+  </div>
+  <div class="checklist">
+    <div class="chk-item"><div class="num">1</div><div class="body"><b>Spouse only, never children</b><span>A child on plain "L-2" (no S) has no work authorization at all, automatic or otherwise.</span></div></div>
+    <div class="chk-item"><div class="num">2</div><div class="body"><b>Ask for the I-94, not just the visa stamp</b><span>Proof is the I-94 showing "L-2S" — candidates can check this at the official CBP I-94 website. The L-2 spouse still files <span class="form-chip">Form I-539</span> to extend or obtain L-2 status itself, even though no separate EAD application is needed for work authorization.</span></div></div>
+    <div class="chk-item"><div class="num">3</div><div class="body"><b>Legacy physical EAD still valid if issued</b><span>Spouses who entered before the 2022 change, or whose I-94 wasn't correctly annotated, may still hold a physical L2-EAD. Either document works.</span></div></div>
+  </div>
+
+  <h3>H-4 vs. L-2, Side by Side</h3>
+  <table class="cmp-table">
+    <thead><tr><th>Factor</th><th>H-4 (dependent of H-1B)</th><th>L-2 (dependent of L-1)</th></tr></thead>
+    <tbody>
+      <tr><td>Automatic work authorization?</td><td>No</td><td>Yes, for spouse (L-2S code)</td></tr>
+      <tr><td>Separate EAD card required?</td><td class="hl">Yes, always</td><td>No — I-94 with L-2S suffices</td></tr>
+      <tr><td>Children authorized to work?</td><td>No</td><td>No</td></tr>
+      <tr><td>Eligibility gate</td><td>Approved I-140 or AC21 extension</td><td>None — automatic upon L-2 spouse status</td></tr>
+      <tr><td>Proof to request</td><td>Physical EAD (I-766), unexpired</td><td>I-94 showing "L-2S," or physical EAD if issued</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Other Dependent Categories</h3>
+  <div class="deflist">
+    <div class="defrow"><div class="term">F-2</div><div class="meaning">Dependent of F-1 student — not authorized to work under any circumstance</div></div>
+    <div class="defrow"><div class="term">TD</div><div class="meaning">Dependent of TN worker — not authorized to work</div></div>
+    <div class="defrow"><div class="term">E-3D</div><div class="meaning">Dependent of E-3 worker — spouse may apply for EAD, similar process to H-4, not automatic like L-2</div></div>
+  </div>
+
+  <div class="callout watch">
+    <span class="kicker">Common Error</span>
+    <h4>Treating H-4 and L-2 as Interchangeable</h4>
+    <p>Both are "dependent visas that might have an EAD," but the rules, proof documents, and risk are completely different. When a candidate says "I'm on a dependent EAD," always ask <strong>which</strong> principal visa it's tied to before assuming what proof to request.</p>
+  </div>
+
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>If a candidate says "I don't need an EAD, I have automatic authorization," your very next question should be: "Is your spouse on an H-1B or an L-1?" That single answer tells you if the claim is even true.</div></div>
+</div>
+
+<div class="divider-stamp"><div class="line"></div><div class="mark">Section 04</div><div class="line"></div></div>
+
+<!-- ═══════════════════ GREEN CARD TRACK ═══════════════════ -->
+<div class="sect" id="sect-greencard">
+  <div class="sect-eyebrow"><span class="stampmark">PERMANENT RESIDENCE</span></div>
+  <div class="sect-title">The Green Card Track</div>
+  <p class="sect-intro">Two terms that sound similar but mean very different things — and confusing them on a submission is a common, avoidable error.</p>
+
+  <h3>Green Card — Permanent Residence</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">A Green Card is like earning <strong>permanent residency status</strong> — the person can live and work in the US almost exactly like a citizen, for any employer, indefinitely.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>Lawful Permanent Residence — the Green Card (GC) — allows a foreign national to live and work permanently in the United States, with almost no restriction on employer or role. An employment-based case starts with <span class="form-chip">Form I-140</span>, Immigrant Petition for Alien Worker, filed by the employer; a family-based case uses <span class="form-chip">Form I-130</span> instead, filed by the relative.</p>
+  </div>
+
+  <h3>How Green Cards Happen Through Employment</h3>
+  <div class="deflist">
+    <div class="defrow"><div class="term">EB-1</div><div class="meaning">Priority Workers — extraordinary ability, outstanding professors/researchers, multinational managers/executives</div></div>
+    <div class="defrow"><div class="term">EB-2</div><div class="meaning">Advanced-degree professionals, or exceptional ability substantially benefiting the US</div></div>
+    <div class="defrow"><div class="term">EB-3</div><div class="meaning">Bachelor's-degree professionals, skilled workers (2+ yrs experience), other workers</div></div>
+    <div class="defrow"><div class="term">EB-4</div><div class="meaning">Special Immigrants — religious workers and other special categories</div></div>
+    <div class="defrow"><div class="term">EB-5</div><div class="meaning">Investors — $500,000–$1,000,000 in a qualifying commercial enterprise</div></div>
+  </div>
+
+  <h3>GC-EAD — The Interim Work Permit</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">If the Green Card process is a long flight with a layover, GC-EAD is the <strong>temporary boarding pass for the layover</strong> — it lets someone work while they wait for the connecting flight to be ready.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>The Green Card process — especially employment-based — can take a year to well over a decade depending on category and country of birth. Once <span class="form-chip">Form I-485</span> (Application to Register Permanent Residence or Adjust Status) is filed and pending, the applicant files <span class="form-chip">Form I-765</span> to request an EAD to work legally while the actual Green Card is still processing — typically paired with <span class="form-chip">Form I-131</span> for Advance Parole (travel authorization) as a combo card.</p>
+  </div>
+
+  <div class="checklist">
+    <div class="chk-item"><div class="num">1</div><div class="body"><b>Not employer-specific</b><span>Unlike H-1B (tied to sponsor) or CPT (tied to school), a GC-EAD holder can work for any employer without new sponsorship.</span></div></div>
+    <div class="chk-item"><div class="num">2</div><div class="body"><b>Code C09</b><span>GC-EAD typically carries category code C09. Cards are usually valid 1–2 years and must be renewed while the case is pending.</span></div></div>
+    <div class="chk-item"><div class="num">3</div><div class="body"><b>Never record GC-EAD as "GC"</b><span>Some clients accept GC-EAD candidates; others specifically require the actual Green Card. Always clarify which the requirement calls for.</span></div></div>
+    <div class="chk-item"><div class="num">4</div><div class="body"><b>Ask where they are in the process</b><span>"I-485 pending" plus a valid EAD confirms GC-EAD status. "I-140 approved" but no I-485 filed yet is an earlier stage.</span></div></div>
+  </div>
+
+  <h3>Green Card vs. GC-EAD vs. USC vs. H-1B</h3>
+  <table class="cmp-table">
+    <thead><tr><th>Status</th><th>Work Authorization</th><th>Employer-Tied?</th><th>Permanent?</th></tr></thead>
+    <tbody>
+      <tr><td>USC</td><td>Unrestricted</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Green Card</td><td>Unrestricted</td><td>No</td><td>Yes</td></tr>
+      <tr><td>GC-EAD</td><td>Full, any employer</td><td>No</td><td>No — interim</td></tr>
+      <tr><td>H-1B</td><td>Sponsoring employer only</td><td>Yes</td><td>No — renewable</td></tr>
+    </tbody>
+  </table>
+
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>When a candidate says "I have my Green Card" but mentions their I-485 is still pending, they almost certainly mean GC-EAD, not an approved Green Card — clarify before you log their status in JobDiva or submit them against a requirement that specifically needs a full GC.</div></div>
+</div>
+
+<div class="divider-stamp"><div class="line"></div><div class="mark">Section 05</div><div class="line"></div></div>
+
+<!-- ═══════════════════ STUDENT STATUS ═══════════════════ -->
+<div class="sect" id="sect-student">
+  <div class="sect-eyebrow"><span class="stampmark">ACADEMIC PATHWAY</span></div>
+  <div class="sect-title">Student Status — F-1, CPT &amp; OPT</div>
+  <p class="sect-intro">The most frequently misunderstood work-authorization pathway in IT staffing. Let's untangle it properly.</p>
+
+  <h3>F-1 — The Base Student Visa</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">F-1 is a <strong>student membership card</strong> — it lets someone study at a US school, but on its own it barely lets them work at all.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>F-1 is the non-immigrant visa for people studying at a US university, college, or other SEVP-approved institution, evidenced by <span class="form-chip">Form I-20</span> (Certificate of Eligibility for Nonimmigrant Student Status), issued by the school. On its own, F-1 permits only limited on-campus work. Real employment eligibility comes through <strong>CPT</strong> or <strong>OPT</strong> — two very different mechanisms that get confused constantly.</p>
+  </div>
+
+  <h3>CPT — Curricular Practical Training</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">CPT is an <strong>official school-sponsored internship</strong> — it only exists because it's part of the curriculum, and only with employers the school has approved.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>Employment that's an integral part of the academic curriculum — internship, cooperative education, or required practicum. Must happen <strong>before</strong> degree completion, requires a job offer at the time of application, and is authorized term by term.</p>
+  </div>
+
+  <h3>OPT — Optional Practical Training</h3>
+  <div class="analogy"><span class="lbl">Think of it like</span><span class="tx">OPT is more like a <strong>personal work permit</strong> tied to the student's degree field — it doesn't need a specific employer's approval up front, and it comes with an actual EAD card.</span></div>
+  <div class="factbox">
+    <div class="fb-title">In Plain Terms</div>
+    <p>Work authorization related to the student's major, resulting in an actual <strong>EAD card</strong> from USCIS. Filed on <span class="form-chip">Form I-765</span> — this is the same application form used for H4-EAD and GC-EAD, just under a different eligibility category. Can be used before or after graduation and doesn't require a job offer to apply. Standard OPT allows up to 12 months; STEM graduates can extend further.</p>
+  </div>
+
+  <h3>CPT vs. OPT, Side by Side</h3>
+  <table class="cmp-table">
+    <thead><tr><th>Factor</th><th>CPT</th><th>OPT</th></tr></thead>
+    <tbody>
+      <tr><td>Timing</td><td>Must complete before graduation</td><td>Before or after graduation</td></tr>
+      <tr><td>Job offer required?</td><td class="hl">Yes</td><td>No</td></tr>
+      <tr><td>Tied to curriculum?</td><td>Yes, must earn course credit</td><td>Related, not a required part of curriculum</td></tr>
+      <tr><td>Proof document</td><td>CPT-authorized I-20 from the school</td><td>Physical EAD card (I-766)</td></tr>
+      <tr><td>Eligible employers</td><td>Only school-approved SEVIS/I-20 list</td><td>Any US employer, if related to field</td></tr>
+      <tr><td>Max duration impact</td><td>12+ mo full-time removes OPT eligibility</td><td>12 mo standard; up to 36 mo with STEM extension</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout update">
+    <span class="kicker">Good to Know</span>
+    <h4>STEM OPT Extension</h4>
+    <p>F-1 students with a qualifying STEM degree can apply for a <strong>24-month extension</strong> of post-completion OPT, for a total of <strong>36 months</strong>. This replaced the earlier 17-month extension. The employer must be enrolled in E-Verify for the student to qualify. Before applying, the student and employer jointly complete <span class="form-chip">Form I-983</span> (Training Plan for STEM OPT Students) with the school; the student then files <span class="form-chip">Form I-765</span> with a new STEM-endorsed I-20.</p>
+  </div>
+
+  <div class="callout watch">
+    <span class="kicker">Common Error</span>
+    <h4>Treating OPT and CPT as Synonyms</h4>
+    <p>Both come from an F-1 visa, but they have different proof documents, different employer restrictions, and different durations. A requirement that says "OPT candidates acceptable" does not automatically mean a CPT candidate qualifies.</p>
+  </div>
+
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>Ask CPT candidates directly whether the employer on the job order is already on their school's approved SEVIS list — a great technical fit is not placeable if that box isn't checked.</div></div>
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>For OPT candidates nearing their 12-month mark, ask about STEM extension eligibility up front — it directly affects how long they can realistically stay on a project.</div></div>
+</div>
+
+<div class="divider-stamp"><div class="line"></div><div class="mark">Section 06</div><div class="line"></div></div>
+
+<!-- ═══════════════════ REFERENCE CODES ═══════════════════ -->
+<div class="sect" id="sect-codes">
+  <div class="sect-eyebrow"><span class="stampmark">DECODE THE CARD</span></div>
+  <div class="sect-title">EAD Category Codes</div>
+  <p class="sect-intro">Every EAD card has a category code printed on its face. Learning to recognize the handful recruiters see most often is the fastest way to confirm what you're actually looking at.</p>
+
+  <div class="callout core">
+    <span class="kicker">Where to Find It</span>
+    <h4>Look Near the Photo</h4>
+    <p>On a physical EAD (Form I-766), the category code appears in a labeled field near the photo — like "C09" or "C33." This code refers to a specific subsection of <strong>8 CFR 274a.12</strong>. Always ask the candidate to confirm this code directly rather than assuming based on what they call their own status.</p>
+  </div>
+
+  <h3>Codes Recruiters See Most Often</h3>
+  <div class="deflist">
+    <div class="defrow"><div class="term">C09</div><div class="meaning">Adjustment-of-status applicant — the standard <strong>GC-EAD</strong> code</div></div>
+    <div class="defrow"><div class="term">C03B</div><div class="meaning">F-1 student — post-completion <strong>OPT</strong></div></div>
+    <div class="defrow"><div class="term">C03A</div><div class="meaning">F-1 student — pre-completion OPT</div></div>
+    <div class="defrow"><div class="term">C03C</div><div class="meaning">F-1 student — 24-month <strong>STEM OPT extension</strong></div></div>
+    <div class="defrow"><div class="term">A17</div><div class="meaning">Spouse of an E-1/E-2 treaty trader/investor, or E-3 spouse (E-3D)</div></div>
+    <div class="defrow"><div class="term">A18</div><div class="meaning">L-2 spouse of an L-1 intracompany transferee — legacy code, largely superseded by the L-2S I-94 rule</div></div>
+    <div class="defrow"><div class="term">C(26)</div><div class="meaning">The standard code for <strong>H4-EAD</strong> spouse work authorization</div></div>
+  </div>
+
+  <h3>Other Codes You May Encounter</h3>
+  <div class="deflist">
+    <div class="defrow"><div class="term">A03</div><div class="meaning">Refugee</div></div>
+    <div class="defrow"><div class="term">A05</div><div class="meaning">Asylee (granted asylum)</div></div>
+    <div class="defrow"><div class="term">A12</div><div class="meaning">Temporary Protected Status (TPS) granted</div></div>
+    <div class="defrow"><div class="term">C08</div><div class="meaning">Asylum applicant with a pending application</div></div>
+    <div class="defrow"><div class="term">C33</div><div class="meaning">DACA recipient</div></div>
+    <div class="defrow"><div class="term">C06</div><div class="meaning">M-1 student seeking post-completion practical training</div></div>
+    <div class="defrow"><div class="term">C05</div><div class="meaning">J-2 spouse or minor child of a J-1 exchange visitor</div></div>
+  </div>
+
+  <div class="callout watch">
+    <span class="kicker">Note on Completeness</span>
+    <h4>This List Isn't Exhaustive</h4>
+    <p>This is a representative selection of codes recruiters encounter most frequently — not the full 8 CFR 274a.12 list. If you see a code not listed here, don't guess: ask the candidate what status it corresponds to, or escalate to your account manager before submitting.</p>
+  </div>
+
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>Save this code list somewhere you can pull up mid-call — recognizing a code in real time, rather than looking it up after the call ends, is what actually prevents submission errors.</div></div>
+</div>
+
+<div class="divider-stamp"><div class="line"></div><div class="mark">Section 07</div><div class="line"></div></div>
+
+<!-- ═══════════════════ FORMS AT A GLANCE ═══════════════════ -->
+<div class="sect" id="sect-forms">
+  <div class="sect-eyebrow"><span class="stampmark">PAPERWORK MAP</span></div>
+  <div class="sect-title">Forms at a Glance</div>
+  <p class="sect-intro">Every status change, extension, or work-authorization request runs through one of a handful of USCIS forms. Knowing which form belongs to which situation — and who actually files it — helps you set realistic timeline expectations with candidates and clients.</p>
+
+  <table class="forms-table">
+    <thead><tr><th>Form</th><th>Full Name</th><th>Who Files It</th><th>Used For</th></tr></thead>
+    <tbody>
+      <tr><td class="formnum">I-129</td><td>Petition for a Nonimmigrant Worker</td><td class="who">Employer</td><td>H-1B, H-1B1, L-1A/B, TN, E-3 — new petitions, extensions, and amendments</td></tr>
+      <tr><td class="formnum">I-539</td><td>Application to Extend/Change Nonimmigrant Status</td><td class="who">Dependent / visitor</td><td>H-4, L-2, E-3D, F-2 status extensions or changes — filed by the dependent, not the employer</td></tr>
+      <tr><td class="formnum">I-765</td><td>Application for Employment Authorization</td><td class="who">Applicant</td><td>Requesting any EAD — H4-EAD, OPT, STEM OPT, GC-EAD. Same form, different eligibility category code each time</td></tr>
+      <tr><td class="formnum">I-140</td><td>Immigrant Petition for Alien Worker</td><td class="who">Employer</td><td>Starts an employment-based Green Card case (EB-1 through EB-3)</td></tr>
+      <tr><td class="formnum">I-130</td><td>Petition for Alien Relative</td><td class="who">Family sponsor</td><td>Starts a family-based Green Card case</td></tr>
+      <tr><td class="formnum">I-485</td><td>Application to Register Permanent Residence or Adjust Status</td><td class="who">Applicant</td><td>The actual Green Card application, filed once a petition is approved and a visa number is available</td></tr>
+      <tr><td class="formnum">I-131</td><td>Application for Travel Document</td><td class="who">Applicant</td><td>Advance Parole — travel authorization while an I-485 is pending</td></tr>
+      <tr><td class="formnum">I-20</td><td>Certificate of Eligibility for Nonimmigrant Student Status</td><td class="who">School (DSO)</td><td>Issued to F-1 students; re-issued with CPT or STEM OPT endorsement when applicable</td></tr>
+      <tr><td class="formnum">I-983</td><td>Training Plan for STEM OPT Students</td><td class="who">Student + employer</td><td>Required before a STEM OPT extension I-20 and I-765 can be filed</td></tr>
+      <tr><td class="formnum">I-9</td><td>Employment Eligibility Verification</td><td class="who">Employer + employee</td><td>Completed for every US hire, regardless of citizenship, within 3 business days of the start date</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout watch">
+    <span class="kicker">Timing Reality Check</span>
+    <h4>Extensions Take Months, Not Days</h4>
+    <p><span class="form-chip">Form I-539</span> processing commonly runs 6–14 months without premium processing; premium processing is now available for certain H-4, L-2, E, and O dependent categories at roughly 30 business days. If a dependent's status or EAD is expiring soon and no extension has been filed yet, that's a real placement risk — not a paperwork formality.</p>
+  </div>
+
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>When a candidate mentions "my extension is in process," ask which form was filed and when — "I-129 filed by my employer last month" and "I-539 filed by me three weeks ago" tell you very different things about how much runway is actually left.</div></div>
+</div>
+
+<div class="divider-stamp"><div class="line"></div><div class="mark">Section 08</div><div class="line"></div></div>
+
+<!-- ═══════════════════ SCREENING PLAYBOOK ═══════════════════ -->
+<div class="sect" id="sect-validation">
+  <div class="sect-eyebrow"><span class="stampmark">FIELD PLAYBOOK</span></div>
+  <div class="sect-title">The Screening Playbook</div>
+  <p class="sect-intro">Every fact in this reference exists to support one skill: asking the right questions during screening. This is the working checklist for every call.</p>
+
+  <h3>Ask Every Candidate</h3>
+  <div class="checklist">
+    <div class="chk-item"><div class="num">1</div><div class="body"><b>What is your current visa status?</b><span>Get the exact term — "H-1B," "H-4 with EAD," "GC-EAD," "OPT" — not a vague "I'm authorized to work."</span></div></div>
+    <div class="chk-item"><div class="num">2</div><div class="body"><b>Do you have a physical EAD card, or is your authorization tied to your visa/I-94 directly?</b><span>This single question separates candidates like L-2 (I-94-based) from H-4 and OPT (EAD-card-based).</span></div></div>
+    <div class="chk-item"><div class="num">3</div><div class="body"><b>What is the category code on your EAD, if you have one?</b><span>Cross-reference against the Reference Codes section. If they don't know it, ask them to check the card.</span></div></div>
+    <div class="chk-item"><div class="num">4</div><div class="body"><b>What is the expiration date on your current work authorization?</b><span>Critical for any placement with real duration.</span></div></div>
+    <div class="chk-item"><div class="num">5</div><div class="body"><b>If a renewal is pending, when was it filed?</b><span>For H4-EAD specifically — determines whether the old 540-day bridge extension applies.</span></div></div>
+    <div class="chk-item"><div class="num">6</div><div class="body"><b>Is your work authorization tied to a specific employer, or portable?</b><span>H-1B, L-1, CPT are employer/school-tied. GC-EAD, OPT, L-2S are portable.</span></div></div>
+    <div class="chk-item"><div class="num">7</div><div class="body"><b>What tax term can you work under — W2, C2C, or 1099?</b><span>A business/compliance question, but certain statuses restrict the answer — most OPT and CPT candidates cannot go 1099.</span></div></div>
+  </div>
+
+  <h3>Status-Specific Validation</h3>
+  <div class="deflist">
+    <div class="defrow"><div class="term">H4-EAD</div><div class="meaning">Confirm the spouse's H-1B has an approved I-140 or AC21 extension. Request the physical EAD — code should read C(26). Confirm expiration and, if renewal is pending, the filing date relative to Oct 30, 2025.</div></div>
+    <div class="defrow"><div class="term">L2-EAD / L-2S</div><div class="meaning">Confirm the candidate is the spouse, not child. Ask if the I-94 shows "L-2S" — this alone is valid proof. If entry predates Jan 30, 2022, ask about a supplemental notice or physical EAD.</div></div>
+    <div class="defrow"><div class="term">OPT</div><div class="meaning">Request the physical EAD — confirm code C03B or C03C. Ask how many months of OPT already used. Confirm employer will complete E-Verify if STEM extension applies.</div></div>
+    <div class="defrow"><div class="term">GC-EAD</div><div class="meaning">Confirm I-485 is filed and pending — ask for the filing date. Confirm EAD category code reads C09. Clarify with your account manager whether the requirement accepts GC-EAD vs. a full Green Card.</div></div>
+  </div>
+
+  <h3>Red Flags — When to Pause and Escalate</h3>
+  <div class="redflags">
+    <div class="rf-item"><span class="flag">⚑</span><span>Candidate cannot name their own visa status precisely — vague answers like "I'm legal to work" warrant a follow-up before proceeding.</span></div>
+    <div class="rf-item"><span class="flag">⚑</span><span>EAD expiration within 30–60 days with no renewal filed — flag explicitly to your account manager rather than assuming it will resolve.</span></div>
+    <div class="rf-item"><span class="flag">⚑</span><span>Candidate claims automatic work authorization but is on H-4, not L-2 — the single most common status confusion.</span></div>
+    <div class="rf-item"><span class="flag">⚑</span><span>CPT candidate wants to work with an employer not on their school's approved list — this can jeopardize F-1 status entirely.</span></div>
+    <div class="rf-item"><span class="flag">⚑</span><span>Any inconsistency between what the candidate says and what the document shows — verify against the physical card or I-94, not the verbal description.</span></div>
+  </div>
+
+  <div class="callout clear">
+    <span class="kicker">The One Habit That Prevents Most Errors</span>
+    <h4>Always Ask to See the Document</h4>
+    <p>Rely on the actual EAD card or I-94 rather than how a candidate describes their own status. Visa terminology is used loosely in everyday conversation; the card and the I-94 are the only sources of truth.</p>
+  </div>
+
+  <div class="rtip"><span class="ic">💡</span><div class="body"><b>Recruiter Tip</b>Build these seven questions into your standard intake script rather than treating them as a special case for "complicated" candidates — asking them every time is what makes them fast and natural instead of awkward.</div></div>
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-section" id="quizSection">
+  <div class="quiz-eyebrow">Knowledge Check</div>
+  <h2>Test Your Understanding</h2>
+  <p>10 questions covering visa types, EAD rules, and validation practices. Score 70%+ to unlock your certificate.</p>
+  <div id="quizWrap">
+    <div id="quizActive">
+      <div class="q-num" id="qNum">QUESTION 1 OF 10</div>
+      <div class="q-text" id="qText"></div>
+      <div class="q-opts" id="qOpts"></div>
+      <div class="q-feedback" id="qFeedback"></div>
+      <div class="q-nav">
+        <span class="q-progress-txt" id="qProg">0 / 10 answered</span>
+        <button class="q-next-btn" id="qNext" onclick="nextQ()">Next →</button>
+      </div>
+    </div>
+    <div class="quiz-result" id="quizResult">
+      <div id="qrEmoji" style="font-size:3rem;">🏆</div>
+      <div class="qr-score" id="qrScore">0/10</div>
+      <div class="qr-msg" id="qrMsg"></div>
+      <button class="qr-restart" onclick="startQuiz()">↺ Retake Quiz</button>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- CERTIFICATE SECTION -->
+<section id="cert-section" style="padding:70px 1rem 60px;">
+  <div style="max-width:800px;margin:0 auto;">
+    <div class="cert-section-header">
+      <span class="kicker">Completion</span>
+      <h2>Claim Your Certificate</h2>
+      <p>Complete and pass the Knowledge Check (70%+) then enter your name to generate your personalized certificate.</p>
+    </div>
+    <div class="cert-input-wrap">
+      <input type="text" id="certNameInput" placeholder="Enter your full name..." maxlength="60">
+      <button class="cert-generate-btn" onclick="generateCert()">Generate &rarr;</button>
+    </div>
+
+    <div id="certDisplay" style="display:none;">
+      <div class="cert-box">
+        <div class="cert-inner-pad">
+
+          <div class="cert-logo-area">
+            <img src="data:image/png;base64,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1qS/Egn8STgEQQxx+7fMaw72/u7w/wCkTvIP7pPH5dK7C38CyuQbq7RB3WNd36nFbVl4T0izIY2/nuP4pju/Tp+lethskrvVxUfUX9oYHD6wV35f5s8ystE1HVX22dq7rnBfGFH4niuy0f4d20BWbVJftDjnyUyEH1PU/pXbKqooVVCqOAAMAUte/h8rpUtZe8/w+44MTnmIqrlp+6vLf7/8hkMMVvEsUMaxxqMKiDAH4U+iivTPGbbd2FFFFAgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z" alt="HonorVet Technologies">
+            <span class="cert-sdvosb">Service-Disabled Veteran Owned Small Business</span>
+          </div>
+
+          <div class="cert-top-divider"></div>
+          <div class="cert-label-top">Certificate of Completion</div>
+          <div class="cert-course-title">US Visa &amp; Work Authorization Reference</div>
+          <div class="cert-course-sub-ref">Recruiter Training &mdash; 2026 Edition</div>
+          <div class="cert-presents-ref">This is to proudly certify that</div>
+          <div id="certNameDisplay" class="cert-name-gradient"></div>
+
+          <p class="cert-desc-text">has successfully completed the <strong>US Visa &amp; Work Authorization Reference</strong> &mdash; covering visa fundamentals, work visas, dependent EADs (H4-EAD, L2-EAD), the Green Card track, student work authorization (F-1/CPT/OPT), and candidate screening practices for US Healthcare &amp; IT staffing.</p>
+
+          <div class="cert-stat-row">
+            <span class="cert-stat-pill">Score: <span id="certScoreDisplay">&mdash;</span></span>
+            <span class="cert-stat-pill">Issued <span id="certDateInline"></span></span>
+          </div>
+
+          <div class="cert-sig-divider"></div>
+
+          <div class="cert-sig-ref">
+            <div class="cert-sig-name-ref">Rachana Narang</div>
+            <div class="cert-sig-role-ref">Authorised &mdash; HonorVet Technologies</div>
+            <div class="cert-sig-org-ref">honorvettech.com</div>
+          </div>
+
+          <div class="cert-bottom-row">
+            <div class="cert-bottom-col">
+              <span id="certDateDisplay" class="cert-bottom-val"></span>
+              <span class="cert-bottom-lbl">Date of Completion</span>
+            </div>
+            <div class="cert-bottom-col">
+              <span class="cert-bottom-val">HonorVet Technologies</span>
+              <span class="cert-bottom-lbl">Issuing Organisation</span>
+            </div>
+          </div>
+
+        </div>
+        <div style="padding:0 0 32px;text-align:center;">
+          <button class="cert-print-btn" onclick="printCertificate()">Print / Save as PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS PANEL -->
+<div id="progressPanel">
+  <div id="progressBody">
+    <div class="pb-title">Quiz Progress</div>
+    <div class="pb-sub">Complete the quiz to unlock your certificate</div>
+    <div class="score-display"><span class="score-num" id="scoreNum">0</span><span class="score-max">/ 10 correct</span></div>
+    <div class="score-bar-wrap"><div class="score-bar" id="scoreBar"></div></div>
+  </div>
+  <button id="progressToggle" onclick="document.getElementById('progressBody').classList.toggle('open')">
+    ◆ Quiz Progress &nbsp;<span id="ptScore">0/10</span>
+  </button>
+</div>
+
+<footer>
+  <div class="footer-flag"><div class="f1"></div><div class="f2"></div></div>
+  <div class="footer-inner">
+    <div class="footer-branding">
+      <img src="data:image/png;base64,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1qS/Egn8STgEQQxx+7fMaw72/u7w/wCkTvIP7pPH5dK7C38CyuQbq7RB3WNd36nFbVl4T0izIY2/nuP4pju/Tp+lethskrvVxUfUX9oYHD6wV35f5s8ystE1HVX22dq7rnBfGFH4niuy0f4d20BWbVJftDjnyUyEH1PU/pXbKqooVVCqOAAMAUte/h8rpUtZe8/w+44MTnmIqrlp+6vLf7/8hkMMVvEsUMaxxqMKiDAH4U+iivTPGbbd2FFFFAgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z" alt="HonorVet Technologies" style="height:38px;object-fit:contain;display:block;">
+      <span class="footer-brand-name">HONORVET TECHNOLOGIES</span>
+      <span class="footer-sep">|</span>
+      <span class="footer-sdvosb">SDVOSB CERTIFIED</span>
+    </div>
+    <p class="footer-sub">US Visa &amp; Work Authorization Reference &mdash; 2026 Edition</p>
+    <p class="footer-copy">Content updated for 2026 &nbsp;&middot;&nbsp; Internal Use Only &nbsp;&middot;&nbsp; &copy; 2026 HonorVet Technologies LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// ════════════════════════════════════════════════════════════
+// SCROLL & NAV
+// ════════════════════════════════════════════════════════════
+window.addEventListener('scroll',function(){
+  var sc=document.documentElement.scrollTop,sh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('scrollBar').style.width=(sh>0?(sc/sh*100):0)+'%';
+  var ids=['sect-foundations','sect-employment','sect-dependent','sect-greencard','sect-student','sect-codes','sect-forms','sect-validation','quizSection'];
+  var cur='';
+  ids.forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=130)cur=id;});
+  document.querySelectorAll('.cat-btn').forEach(function(b,i){
+    b.classList.toggle('active',ids[i]===cur);
+  });
+});
+function jumpTo(id,btn){
+  document.querySelectorAll('.cat-btn').forEach(function(b){b.classList.remove('active');});
+  if(btn) btn.classList.add('active');
+  var el=document.querySelector(id);
+  if(el) window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-110,behavior:'smooth'});
+}
+
+// ════════════════════════════════════════════════════════════
+// QUIZ
+// ════════════════════════════════════════════════════════════
+var QS=[
+  {q:'An H-4 spouse wants to work. What must they have before starting employment?',opts:['Nothing extra — H-4 status alone authorizes work','A valid, unexpired H4-EAD card (category code C(26))','Just an I-94 showing H-4 status','A letter from the H-1B employer'],c:1,e:'H-4 status alone does not authorize work. The spouse must hold a physical, unexpired EAD card (code C26), and only qualifies if the H-1B principal has an approved I-140 or AC21 extension.'},
+  {q:'Since January 30, 2022, how do L-2 spouses prove work authorization?',opts:['They must file Form I-765 and wait for a physical EAD card','They cannot work under any circumstances','An I-94 showing the "L-2S" class of admission code is sufficient — no separate EAD required','Only through their employer\'s sponsorship'],c:2,e:'L-2 spouses receive automatic work authorization incident to status. The I-94 with the "L-2S" code is itself acceptable proof — no separate EAD card is required.'},
+  {q:'What is the key difference between CPT and OPT for F-1 students?',opts:['CPT must be completed before graduation and requires a job offer; OPT can be used before or after graduation and does not require one','CPT and OPT are the same program with different names','OPT is only for undergraduate students','CPT results in a physical EAD card, OPT does not'],c:0,e:'CPT is tied to the curriculum, must happen before graduation, and requires a job offer. OPT can be used before or after graduation, does not require a job offer, and results in a physical EAD.'},
+  {q:'What does the EAD category code C09 typically indicate?',opts:['F-1 student on post-completion OPT','Adjustment-of-status applicant — the standard GC-EAD code','H-4 spouse work authorization','DACA recipient'],c:1,e:'C09 is the standard code for an adjustment-of-status applicant — this is the GC-EAD code, used while an I-485 Green Card application is pending.'},
+  {q:'A candidate says they have a "dependent EAD." What should you ask first?',opts:['Nothing further — all dependent EADs work the same way','Their expected salary','Which principal visa (H-1B or L-1) the dependent status is tied to, since H-4 and L-2 follow different rules','Whether they prefer W2 or C2C'],c:2,e:'H-4 and L-2 dependent statuses follow completely different work authorization rules. You must confirm which principal visa is involved before knowing what proof to request.'},
+  {q:'What changed for H4-EAD renewals filed on or after October 30, 2025?',opts:['Nothing changed — the rules are identical to before','H4-EAD was eliminated entirely','Processing became instant','The automatic 540-day bridge extension on expired cards no longer applies — the candidate cannot work if the card expires before renewal is approved'],c:3,e:'DHS eliminated the automatic EAD extension for renewals filed on/after October 30, 2025. Without a bridge, if the card expires before the renewal is approved, the candidate cannot legally work.'},
+  {q:'Is a GC-EAD the same as holding an actual Green Card?',opts:['Yes, they are identical in every respect','No — GC-EAD is interim work authorization while an I-485 application is pending; it is not permanent residency itself','GC-EAD is only for children of Green Card holders','GC-EAD replaces the need for a Green Card entirely'],c:1,e:'GC-EAD is a bridge document providing work authorization while the Green Card application (I-485) is still pending. It is not the same as holding an actual Green Card.'},
+  {q:'Which visa is restricted specifically to Australian citizens?',opts:['TN','H-1B1','E-3','L-1A'],c:2,e:'E-3 is reserved specifically for Australian citizens in a specialty occupation, functioning similarly to H-1B but with its own annual cap.'},
+  {q:'A CPT candidate wants to work for an employer not on their school\'s approved SEVIS list. What\'s the concern?',opts:['There is no concern — CPT candidates can work anywhere','This could jeopardize the candidate\'s F-1 status, since CPT employers must be school-approved','It only affects their tax withholding','This is only a concern for OPT, not CPT'],c:1,e:'CPT authorization is tied to specific school-approved employers on the SEVIS/I-20 list. Working for a non-approved employer can jeopardize the student\'s F-1 status entirely.'},
+  {q:'What is the single most reliable way to confirm a candidate\'s work authorization during screening?',opts:['Trust their verbal description of their status','Ask their previous recruiter','Request to see the actual EAD card or I-94 record directly, rather than relying on how they describe it','Assume based on their job title'],c:2,e:'Visa terminology is used loosely in everyday conversation. The physical EAD card and the I-94 record are the only reliable sources of truth for confirming work authorization.'},
+];
+var qCur=0,qScore=0,qAnswered=[];
+function startQuiz(){
+  qCur=0;qScore=0;qAnswered=[];
+  document.getElementById('quizActive').style.display='';
+  document.getElementById('quizResult').className='quiz-result';
+  showQ();
+}
+function showQ(){
+  var q=QS[qCur];
+  document.getElementById('qNum').textContent='QUESTION '+(qCur+1)+' OF '+QS.length;
+  document.getElementById('qText').textContent=q.q;
+  document.getElementById('qProg').textContent=qAnswered.length+' / '+QS.length+' answered';
+  var opts=document.getElementById('qOpts');
+  opts.innerHTML='';
+  q.opts.forEach(function(o,i){
+    var btn=document.createElement('button');
+    btn.className='q-opt';
+    btn.textContent=o;
+    btn.addEventListener('click',function(){answerQ(i,q,btn);});
+    opts.appendChild(btn);
+  });
+  document.getElementById('qFeedback').className='q-feedback';
+  document.getElementById('qNext').className='q-next-btn';
+}
+function answerQ(idx,q,btn){
+  document.querySelectorAll('.q-opt').forEach(function(b){b.disabled=true;});
+  var fb=document.getElementById('qFeedback');
+  if(idx===q.c){btn.classList.add('correct');qScore++;fb.className='q-feedback show good';fb.innerHTML='<strong>Correct.</strong> '+q.e;}
+  else{btn.classList.add('wrong');document.querySelectorAll('.q-opt')[q.c].classList.add('correct');fb.className='q-feedback show bad';fb.innerHTML='<strong>Not quite.</strong> '+q.e;}
+  qAnswered.push(idx===q.c);
+  document.getElementById('qProg').textContent=qAnswered.length+' / '+QS.length+' answered';
+  document.getElementById('scoreNum').textContent=qScore;
+  document.getElementById('ptScore').textContent=qScore+'/10';
+  document.getElementById('scoreBar').style.width=(qScore/QS.length*100)+'%';
+  var nb=document.getElementById('qNext');
+  nb.className='q-next-btn show';
+  nb.textContent=qCur<QS.length-1?'Next →':'See Results →';
+}
+function nextQ(){
+  qCur++;
+  if(qCur>=QS.length){showResults();}else{showQ();}
+}
+var quizPassed=false;
+function showResults(){
+  document.getElementById('quizActive').style.display='none';
+  var res=document.getElementById('quizResult');
+  res.className='quiz-result show';
+  var pct=Math.round(qScore/QS.length*100);
+  document.getElementById('qrScore').textContent=qScore+'/'+QS.length+' ('+pct+'%)';
+  var emoji='🏆',msg='';
+  if(pct>=90){emoji='🎉';msg='Outstanding — you have a strong command of visa and work authorization rules. Your certificate is ready.';}
+  else if(pct>=70){emoji='🏆';msg='You passed. Claim your certificate below.';}
+  else{emoji='📖';msg='Review the sections above and retake to reach 70% and unlock your certificate.';}
+  document.getElementById('qrEmoji').textContent=emoji;
+  document.getElementById('qrMsg').textContent=msg;
+  quizPassed = pct>=70;
+  if(quizPassed){
+    setTimeout(function(){
+      var certSec = document.getElementById('cert-section');
+      if(certSec) certSec.scrollIntoView({behavior:'smooth', block:'start'});
+      var inp = document.getElementById('certNameInput');
+      if(inp){
+        inp.style.borderColor = 'var(--gold)';
+        inp.style.boxShadow   = '0 0 0 3px rgba(253,216,38,0.35)';
+        inp.placeholder       = 'Enter your name and click Generate';
+      }
+    }, 1800);
+  }
+}
+startQuiz();
+
+// ════════════════════════════════════════════════════════════
+// CERTIFICATE
+// ════════════════════════════════════════════════════════════
+function printCertificate(){
+  var certBox = document.getElementById('certDisplay');
+  if(!certBox || certBox.style.display === 'none'){
+    alert('Please generate your certificate first, then click Print.');
+    return;
+  }
+  var clone = document.createElement('div');
+  clone.className = 'cert-only-print';
+  clone.innerHTML = certBox.innerHTML;
+  document.body.appendChild(clone);
+  var btn = clone.querySelector('.cert-print-btn');
+  if(btn) btn.style.display = 'none';
+  window.print();
+  document.body.removeChild(clone);
+}
+function generateCert(){
+  var inp = document.getElementById('certNameInput');
+  var name = inp ? inp.value.trim() : '';
+  if(!name){
+    alert('Please enter your full name to generate the certificate.');
+    if(inp) inp.focus();
+    return;
+  }
+  if(!quizPassed){
+    alert('Please complete and pass the Knowledge Check (70% or higher) to unlock your certificate.');
+    var quizSec = document.getElementById('quizSection');
+    if(quizSec) quizSec.scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+  var total = (typeof QS !== 'undefined' && QS.length) ? QS.length : 10;
+  var score = (typeof qScore !== 'undefined') ? qScore : 0;
+  var pct   = total > 0 ? Math.round(score / total * 100) : 0;
+  var today = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+
+  var nameEl = document.getElementById('certNameDisplay');
+  if(nameEl) nameEl.textContent = name;
+  var scoreEl = document.getElementById('certScoreDisplay');
+  if(scoreEl) scoreEl.textContent = pct + '%';
+  var dateEl = document.getElementById('certDateDisplay');
+  if(dateEl) dateEl.textContent = today;
+  var dateInline = document.getElementById('certDateInline');
+  if(dateInline) dateInline.textContent = today;
+
+  var d = document.getElementById('certDisplay');
+  if(d){
+    d.style.display = 'block';
+    setTimeout(function(){ d.scrollIntoView({behavior:'smooth',block:'start'}); }, 150);
+  }
+}
+</script>
+</body>
+</html>
